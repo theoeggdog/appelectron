@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Injecta UI (Invisible Elements)</title>
+  <style>
+    html, body {
+      margin: 0; 
+      padding: 0;
+      width: 594px;
+      height: 420px;
+      background: transparent;
+      overflow: hidden;
+      -webkit-user-select: none;
+    }
+
+    /* This div covers whole window and is draggable */
+    .drag-region {
+      -webkit-app-region: drag;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://cdn.discordapp.com/attachments/1372544203875287060/1372940600638177290/la_boco.png?ex=68289a13&is=68274893&hm=bf13fef0465267db7af2f87cf865019302810b33029d0d5e2ff08c7c38af26d4&');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+    }
+
+    textarea {
+      position: absolute;
+      top: 97px;
+      left: 84px;
+      width: 430px;
+      height: 157px;
+      background: transparent;
+      border: none;
+      color: #87CEEB;
+      font-family: monospace;
+      font-size: 12px;
+      padding: 0;
+      resize: none;
+      outline: none;
+      caret-color: #87CEEB;
+      z-index: 1;
+      -webkit-app-region: no-drag; /* Make textarea NOT draggable so user can type */
+    }
+  </style>
+</head>
+<body>
+  <div class="drag-region"></div>
+  <textarea placeholder="Write your script here..."></textarea>
+</body>
+</html>
